@@ -14,6 +14,7 @@
     htop
     coreutils
     wget
+    warp
 
     docker-client
     docker-buildx

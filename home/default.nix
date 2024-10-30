@@ -8,11 +8,7 @@
     ./features/shell
     ./features/packages
     ./features/git
-    ./features/nvim
-    ./features/secrets
     ./features/tmux
-    ./features/wezterm
-    ./features/go
     ./features/php
   ];
 
@@ -28,7 +24,7 @@
   nixpkgs.config.allowUnfreePredicate = _: true;
 
   home.sessionVariables = {
-    EDITOR = "nvim";
+    EDITOR = "nano";
   };
 
   # Let Home Manager install and manage itself.

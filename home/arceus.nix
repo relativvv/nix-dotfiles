@@ -11,10 +11,6 @@
     ./features/darwin
   ];
 
-  home.username = "kevin";
-  home.homeDirectory = lib.mkForce "/Users/kevin";
-
-  home.packages = with pkgs; [
-    skhd
-  ];
+  home.username = "robin";
+  home.homeDirectory = lib.mkForce "/Users/robin";
 }

@@ -3,10 +3,8 @@
 , ...
 }: {
   system.defaults.dock = {
-    autohide = true;
-    autohide-delay = 0.0;
+    autohide = false;
 
-    autohide-time-modifier = 0.2;
     expose-animation-duration = 0.2;
     tilesize = 48;
     launchanim = false;
@@ -25,11 +23,11 @@
     swapLeftCommandAndLeftAlt = remapKeys;
     
     # use https://hidutil-generator.netlify.app/ and convert hex to decimal
-    userKeyMapping = [
-      {
-        HIDKeyboardModifierMappingSrc = 30064771300;
-        HIDKeyboardModifierMappingDst = 30064771302;
-      }
-    ];
+    #userKeyMapping = [
+    #  {
+    #    HIDKeyboardModifierMappingSrc = 30064771300;
+    #    HIDKeyboardModifierMappingDst = 30064771302;
+    #  }
+    #];
   };
 }

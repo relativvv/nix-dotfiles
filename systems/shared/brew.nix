@@ -16,7 +16,6 @@
     ];
 
     brews = [
-      "platformsh-cli"
       "docker-credential-helper"
       "argocd"
       "dnsmasq"
@@ -28,7 +27,6 @@
 
     casks = [
       "bruno"
-      "rancher"
       "orbstack"
     ];
   };

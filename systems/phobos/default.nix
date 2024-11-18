@@ -51,21 +51,17 @@
 
   time.timeZone = "Europe/Berlin";
 
-  # Nix config from https://github.com/DeterminateSystems/nix-installer
-
-  nix = {
-    # package = pkgs.nixVersions.nix_2_23;
-    # extraOptions = ''
-    #   experimental-features = nix-command flakes auto-allocate-uids
-    #   builders-use-substitutes = true
-    #   auto-allocate-uids = true
-    #   builders = @/etc/nix/machines
-    #   log-lines = 100
-    #   nix-path = nixpkgs=${flake.inputs.nixpkgs}
-    #   extra-platforms = x86_64-darwin aarch64-darwin
-    # '';
-
-    settings.trusted-users = [ "root" "kevin" ];
+  nix.settings = {
+    trusted-users = [ "root" "kevin" ];
+    trusted-substituters = [
+      "https://cachix.cachix.org"
+      "https://nixpkgs.cachix.org"
+    ];
+    trusted-public-keys = [
+      "cachix.cachix.org-1:eWNHQldwUO7G2VkjpnjDbWwy4KQ/HNxht7H4SSoMckM="
+      "nixpkgs.cachix.org-1:q91R6hxbwFvDqTSDKwDAV4T5PxqXGxswD8vhONFMeOE="
+      "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
+    ];
   };
 
 }

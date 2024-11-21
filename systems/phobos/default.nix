@@ -6,6 +6,7 @@
 , ...
 }: {
   imports = [
+    ../shared/aerospace.nix
     ../shared/yabai.nix
     ../shared/skhd.nix
     ../shared/brew.nix

@@ -15,6 +15,8 @@
         "move-mouse window-lazy-center"
       ];
 
+      automatically-unhide-macos-hidden-apps = false;
+
       accordion-padding = 30;
       default-root-container-layout = "tiles";
       default-root-container-orientation = "auto";
@@ -76,8 +78,8 @@
       mode.resize.binding = {
         left = "resize width +50";
         right = "resize width -50";
-        up = "resize width -50";
-        down = "resize height +50";
+        up = "resize height +50";
+        down = "resize height -50";
         enter = "mode main";
         esc = "mode main";
       };

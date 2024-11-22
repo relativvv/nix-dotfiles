@@ -6,29 +6,23 @@
     enable = true;
     onActivation = {
       autoUpdate = true;
-      cleanup = "uninstall";
+      cleanup = "zap";
       upgrade = true;
     };
 
     taps = [
-      "platformsh/tap"
       "aws/tap"
     ];
 
     brews = [
       "docker-credential-helper"
       "argocd"
-      "dnsmasq"
       "eks-node-viewer"
-      "grpcurl"
-      "exiftool"
       "azure-cli"
     ];
 
     casks = [
-      "bruno"
       "orbstack"
-      "podman-desktop"
       "hammerspoon"
     ];
   };

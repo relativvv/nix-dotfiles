@@ -39,6 +39,9 @@
         alt-5 = "workspace 5";
         alt-6 = "workspace 6";
 
+        alt-shift-p = "workspace --wrap-around prev";
+        alt-shift-n = "workspace --wrap-around next";
+
         alt-shift-1 = ["move-node-to-workspace 1" "workspace 1"];
         alt-shift-2 = ["move-node-to-workspace 2" "workspace 2"];
         alt-shift-3 = ["move-node-to-workspace 3" "workspace 3"];
@@ -56,14 +59,12 @@
         alt-shift-up = "move up";
         alt-shift-down = "move down";
 
-        alt-h = "join-with left";
-        alt-v = "join-with up";
+        alt-s = "layout v_accordion";
+        alt-w = "layout h_accordion";
+        alt-e = "layout tiles horizontal vertical";
 
-        alt-s = "layout v_accordion"; # 'layout stacking' in i4
-        alt-w = "layout h_accordion"; # 'layout tabbed' in i3
-        alt-e = "layout tiles horizontal vertical"; # 'layout toggle split' in i3
-
-        alt-shift-space = "layout floating tiling"; # 'floating toggle' in i3
+        alt-shift-space = "layout floating tiling";
+        alt-f = "layout floating tiling";
 
         alt-enter = "exec-and-forget open -na WezTerm";
         alt-b = "exec-and-forget open -na \"Google Chrome\" --args --new-window";

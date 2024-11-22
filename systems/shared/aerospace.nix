@@ -73,6 +73,7 @@
         alt-shift-q = "close --quit-if-last-window";
 
         alt-r = "mode resize";
+        alt-shift-comma = "mode layout";
       };
 
       mode.resize.binding = {
@@ -82,6 +83,16 @@
         down = "resize height -50";
         enter = "mode main";
         esc = "mode main";
+      };
+
+      mode.layout.binding = {
+        esc = "mode  main";
+        enter = "mode main";
+        r = "flatten-workspace-tree";
+        alt-left = "join-with left";
+        alt-right = "join-with right";
+        alt-up = "join-with up";
+        alt-down = "join-with down";
       };
     };
   };

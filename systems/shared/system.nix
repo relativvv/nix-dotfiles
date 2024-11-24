@@ -23,7 +23,7 @@
   system.keyboard = {
     enableKeyMapping = true;
     swapLeftCommandAndLeftAlt = remapKeys;
-    
+
     # use https://hidutil-generator.netlify.app/ and convert hex to decimal
     userKeyMapping = [
       {
@@ -31,5 +31,42 @@
         HIDKeyboardModifierMappingDst = 30064771302;
       }
     ];
+  };
+
+  system.defaults = {
+    NSGlobalDomain.AppleShowAllExtensions = true;
+    WindowManager.EnableStandardClickToShowDesktop = false;
+    finder.AppleShowAllExtensions = true;
+    finder._FXShowPosixPathInTitle = true;
+    finder.FXEnableExtensionChangeWarning = false;
+    NSGlobalDomain."com.apple.swipescrolldirection" = false;
+  };
+
+  system.defaults.CustomUserPreferences = {
+    "com.apple.finder" = {
+      ShowExternalHardDrivesOnDesktop = true;
+      ShowHardDrivesOnDesktop = true;
+      ShowMountedServersOnDesktop = true;
+      ShowRemovableMediaOnDesktop = true;
+      _FXSortFoldersFirst = true;
+      # When performing a search, search the current folder by default
+      FXDefaultSearchScope = "SCcf";
+    };
+    "com.apple.desktopservices" = {
+      # Avoid creating .DS_Store files on network or USB volumes
+      DSDontWriteNetworkStores = true;
+      DSDontWriteUSBStores = true;
+    };
+    "com.apple.AdLib" = {
+      allowApplePersonalizedAdvertising = false;
+    };
+    "com.apple.SoftwareUpdate" = {
+      AutomaticCheckEnabled = true;
+      ScheduleFrequency = 1;
+      AutomaticDownload = 1;
+      CriticalUpdateInstall = 0;
+    };
+    "com.apple.ImageCapture".disableHotPlug = true;
+    "com.apple.commerce".AutoUpdate = true;
   };
 }

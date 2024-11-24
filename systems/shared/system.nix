@@ -35,6 +35,7 @@
 
   system.defaults = {
     NSGlobalDomain.AppleShowAllExtensions = true;
+    NSGlobalDomain.NSWindowShouldDragOnGesture = true;
     WindowManager.EnableStandardClickToShowDesktop = false;
     finder.AppleShowAllExtensions = true;
     finder._FXShowPosixPathInTitle = true;

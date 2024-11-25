@@ -40,6 +40,8 @@
     awscli2
     eksctl
     cilium-cli
+
+    kind
   ];
 }
 

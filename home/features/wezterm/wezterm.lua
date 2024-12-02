@@ -12,6 +12,8 @@ config.use_dead_keys = true
 config.adjust_window_size_when_changing_font_size = false
 config.front_end = "WebGpu"
 config.webgpu_power_preference = 'HighPerformance'
+config.window_close_confirmation = 'NeverPrompt'
+
 
 config.keys = {{
     key = "p",

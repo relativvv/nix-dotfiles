@@ -23,6 +23,7 @@
     kubectx
     kubernetes-helm
     kubent
+    stern
 
     terraform
 

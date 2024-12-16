@@ -59,10 +59,6 @@
         alt-shift-up = "move up";
         alt-shift-down = "move down";
 
-        alt-s = "layout v_accordion";
-        alt-w = "layout h_accordion";
-        alt-e = "layout tiles horizontal vertical";
-
         alt-shift-space = "layout floating tiling";
         alt-f = "layout floating tiling";
 
@@ -94,6 +90,9 @@
         alt-right = "join-with right";
         alt-up = "join-with up";
         alt-down = "join-with down";
+        alt-s = "layout v_accordion";
+        alt-w = "layout h_accordion";
+        alt-e = "layout tiles horizontal vertical";
       };
     };
   };

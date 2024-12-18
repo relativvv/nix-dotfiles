@@ -14,7 +14,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    devenv.url = "github:cachix/devenv/main";
+    devenv.url = "github:cachix/devenv/v1.3.1";
 
     sops-nix.url = "github:Mic92/sops-nix";
 

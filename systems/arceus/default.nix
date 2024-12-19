@@ -6,9 +6,6 @@
 , ...
 }: {
   imports = [
-    ../shared/aerospace.nix
-    ../shared/yabai.nix
-    ../shared/skhd.nix
     ../shared/brew.nix
     ../shared/system.nix
     ../shared/fonts.nix
@@ -16,14 +13,14 @@
 
   system.stateVersion = 5;
 
-  users.users.kevin = {
-    home = "/Users/kevin";
+  users.users."R.Schulte" = {
+    home = "/Users/R.Schulte";
     shell = "${pkgs.fish}/bin/fish";
   };
 
-  home-manager.users.kevin = {
+  home-manager.users."R.Schulte" = {
     imports = [
-      ../../home/phobos.nix
+      ../../home/arceus.nix
     ];
   };
 
@@ -53,7 +50,7 @@
   time.timeZone = "Europe/Berlin";
 
   nix.settings = {
-    trusted-users = [ "root" "kevin" ];
+    trusted-users = [ "root" "R.Schulte" ];
     trusted-substituters = [
       "https://cachix.cachix.org"
       "https://nixpkgs.cachix.org"

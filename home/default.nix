@@ -9,11 +9,10 @@
     ./features/packages
     ./features/git
     ./features/nvim
-    ./features/secrets
     ./features/tmux
-    ./features/wezterm
     ./features/go
     ./features/php
+    ./features/python
   ];
 
   # This value determines the Home Manager release that your configuration is

@@ -1,15 +1,11 @@
 { pkgs
-, remapKeys
 , ...
 }: {
   system.defaults.dock = {
-    autohide = true;
-    autohide-delay = 0.0;
+    autohide = false;
 
-    autohide-time-modifier = 0.2;
-    expose-animation-duration = 0.2;
-    tilesize = 48;
-    launchanim = false;
+    tilesize = 54;
+    launchanim = true;
     static-only = false;
     showhidden = true;
     show-recents = false;
@@ -20,26 +16,13 @@
 
   security.pam.enableSudoTouchIdAuth = true;
 
-  system.keyboard = {
-    enableKeyMapping = true;
-    swapLeftCommandAndLeftAlt = remapKeys;
-
-    # use https://hidutil-generator.netlify.app/ and convert hex to decimal
-    userKeyMapping = [
-      {
-        HIDKeyboardModifierMappingSrc = 30064771300;
-        HIDKeyboardModifierMappingDst = 30064771302;
-      }
-    ];
-  };
-
   system.defaults = {
     NSGlobalDomain.AppleShowAllExtensions = true;
     NSGlobalDomain.NSWindowShouldDragOnGesture = true;
-    WindowManager.EnableStandardClickToShowDesktop = false;
+    WindowManager.EnableStandardClickToShowDesktop = true;
     finder.AppleShowAllExtensions = true;
     finder._FXShowPosixPathInTitle = true;
-    finder.FXEnableExtensionChangeWarning = false;
+    finder.FXEnableExtensionChangeWarning = true;
     NSGlobalDomain."com.apple.swipescrolldirection" = false;
   };
 

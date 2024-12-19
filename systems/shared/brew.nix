@@ -16,14 +16,11 @@
 
     brews = [
       "docker-credential-helper"
-      "argocd"
-      "eks-node-viewer"
-      "azure-cli"
     ];
 
     casks = [
       "orbstack"
-      "hammerspoon"
+      "insomnia"
     ];
   };
 }

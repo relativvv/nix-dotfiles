@@ -23,6 +23,9 @@
 
     # workaround for fixing the path order: https://github.com/LnL7/nix-darwin/issues/122
     shellInit = ''
+      eval $(ssh-agent -s)
+      ssh-add
+
       for elt in $PATH
         if not contains -- $elt $oldPath /usr/local/bin /usr/bin /bin /usr/sbin /sbin
           set -ag fish_user_paths $elt
@@ -30,6 +33,8 @@
       end
       set -el oldPath
 
+      # Set locale
+      set -gx LANG "en_US.UTF-8"
 
       # Homebrew config
       set -gx HOMEBREW_PREFIX "/opt/homebrew";
@@ -43,11 +48,11 @@
       set -gx VOLTA_HOME $HOME/.volta
       fish_add_path $VOLTA_HOME/bin
 
-      # Krew
-      fish_add_path $HOME/.krew/bin
-
       # Go Binaries
       fish_add_path $GOPATH/bin
+
+      # XDG Config Home
+      set -gx XDG_CONFIG_HOME $HOME/.config
     '';
 
     plugins = [
@@ -81,15 +86,14 @@
     };
   };
 
+
   programs.starship = {
     enable = true;
+    enableFishIntegration = true;
+  };
 
-    settings = {
-      aws.disabled = true;
-      gcloud.disabled = true;
-      git_status.disabled = true;
-      command_timeout = 1500;
-    };
+  home.file = { 
+    ".config/starship.toml".source = ./starship.toml;
   };
 
   programs.zoxide = {
@@ -103,10 +107,11 @@
   };
 
   home.shellAliases = {
-    "wgup-staging" = "wg-quick up ~/.config/wireguard/staging.conf";
-    "wgdown-staging" = "wg-quick down ~/.config/wireguard/staging.conf";
     "cat" = "bat -pp";
-    "tailscale" = "/Applications/Tailscale.app/Contents/MacOS/Tailscale";
-    "k" = "kubectl";
+    "python" = "python3";
+    "pip" = "pip3";
+    "cdcore" = "cd $HOME/Workspace/shopware-business-platform/Components/Core";
+    "cdfrontend" = "cd $HOME/Workspace/shopware-business-platform/Components/Frontend";
+    "cdaccount" = "cd $HOME/Workspace/shopware-business-platform/Components/Account2";
   };
 }

@@ -1,7 +1,7 @@
 { pkgs, flake, ... }: {
 
   home.packages = with pkgs; [
-    flake.inputs.devenv.packages.${system}.devenv
+    flake.inputs.devenv.packages.${pkgs.system}.devenv
     cachix
 
     nixpkgs-fmt
@@ -15,12 +15,16 @@
     coreutils
     pigz
     wget
-    mysql80
+    mysql84
+    cargo
+    nmap
 
     docker-client
     docker-buildx
     dive
     gh
+    bun
+    carapace
   ];
 }
 

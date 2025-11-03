@@ -1,3 +1,4 @@
+# This file contains the MacOS Homebrew configurations for the system, including taps, brews and casks.
 { pkgs
 , ...
 }: {
@@ -16,11 +17,17 @@
 
     brews = [
       "docker-credential-helper"
+      "yt-dlp"
+      "lazygit"
     ];
 
     casks = [
       "orbstack"
       "insomnia"
+      "capcut"
+      "minecraft"
+      "lm-studio"
+      "ghostty"
     ];
   };
 }

@@ -53,6 +53,10 @@
 
       # XDG Config Home
       set -gx XDG_CONFIG_HOME $HOME/.config
+
+      # Carapace
+      set -Ux CARAPACE_BRIDGES 'zsh,fish,bash,inshellisense'
+      carapace _carapace | source
     '';
 
     plugins = [
@@ -66,22 +70,6 @@
       '';
       t = ''
         tmux attach -t "$(tmux ls -F '#{session_name}:#{window_name}' | fzf)"
-      '';
-      awsx = ''
-        if test -z $AWSX_PROFILES
-            set -gx AWS_PROFILES (aws configure list-profiles | string split0)
-        end
-
-        set -gx AWS_PROFILE (echo $AWS_PROFILES | fzf)
-
-        echo "Using profile: $AWS_PROFILE"
-        aws sts get-caller-identity &> /dev/null
-        if test $status != 0
-            echo "AWS SSO Session expired. Logging in..."
-            aws sso login
-        else
-            echo "Found valid SSO session, using it!"
-        end
       '';
     };
   };

@@ -11,5 +11,4 @@
   ];
 
   home.username = "R.Schulte";
-  home.homeDirectory = lib.mkForce "/Users/R.Schulte";
 }

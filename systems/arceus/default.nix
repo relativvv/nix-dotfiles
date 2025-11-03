@@ -12,6 +12,7 @@
   ];
 
   system.stateVersion = 5;
+  system.primaryUser = "R.Schulte";
 
   users.users."R.Schulte" = {
     home = "/Users/R.Schulte";

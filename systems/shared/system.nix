@@ -1,3 +1,4 @@
+# This file contains the MacOS System configurations for the system, including defaults, security and custom preferences.
 { pkgs
 , ...
 }: {

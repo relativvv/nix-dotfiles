@@ -19,6 +19,7 @@
       "docker-credential-helper"
       "yt-dlp"
       "lazygit"
+      "mise"
     ];
 
     casks = [

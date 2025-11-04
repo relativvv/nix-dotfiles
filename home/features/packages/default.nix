@@ -24,7 +24,6 @@
     dive
     gh
     bun
-    carapace
   ];
 }
 

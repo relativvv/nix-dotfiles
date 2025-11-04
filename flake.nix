@@ -2,9 +2,8 @@
   description = "Home Manager configuration";
 
   inputs = {
-    nix.url = "https://flakehub.com/f/DeterminateSystems/nix/2.0";
-
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
+    determinate.url = "https://flakehub.com/f/DeterminateSystems/determinate/3.12.0";
 
     nix-darwin.url = "github:LnL7/nix-darwin/master";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
@@ -14,27 +13,22 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    devenv.url = "github:cachix/devenv/v1.3.1";
-
-
-    mac-app-util.url = "github:hraban/mac-app-util";
+    devenv.url = "github:cachix/devenv/v1.10";
   };
 
   outputs =
     { self
-    , nix
     , nixpkgs
+    , determinate
     , nix-darwin
     , home-manager
     , devenv
-    , sops-nix
     , ...
     }:
     let
       supportedSystems = [ "x86_64-linux" "aarch64-darwin" ];
       forAllSystems = nixpkgs.lib.genAttrs supportedSystems;
       extraArgs = {
-        inherit sops-nix;
         flake = self;
       };
     in
@@ -57,7 +51,15 @@
               home-manager.useUserPackages = true;
               home-manager.extraSpecialArgs = extraArgs;
             }
-            nix.darwinModules.default
+            determinate.darwinModules.default
+            {
+                determinate-nix.customSettings = {
+                  lazy-trees = true;
+                  trusted-users = "root R.Schulte";
+                  trusted-substituters = "https://cachix.cachix.org https://nixpkgs.cachix.org";
+                  trusted-public-keys = "cachix.cachix.org-1:eWNHQldwUO7G2VkjpnjDbWwy4KQ/HNxht7H4SSoMckM= nixpkgs.cachix.org-1:q91R6hxbwFvDqTSDKwDAV4T5PxqXGxswD8vhONFMeOE= cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY=";
+                };
+            }
           ];
         };
       };

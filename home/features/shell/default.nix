@@ -23,9 +23,6 @@
 
     # workaround for fixing the path order: https://github.com/LnL7/nix-darwin/issues/122
     shellInit = ''
-      eval $(ssh-agent -s)
-      ssh-add
-
       for elt in $PATH
         if not contains -- $elt $oldPath /usr/local/bin /usr/bin /bin /usr/sbin /sbin
           set -ag fish_user_paths $elt
@@ -54,13 +51,13 @@
       # XDG Config Home
       set -gx XDG_CONFIG_HOME $HOME/.config
 
-      # Carapace
-      set -Ux CARAPACE_BRIDGES 'zsh,fish,bash,inshellisense'
-      carapace _carapace | source
+      # Mise
+      mise activate fish | source
     '';
 
     plugins = [
       { name = "fzf"; src = pkgs.fishPlugins.fzf-fish.src; }
+      { name = "async-prompt"; src = pkgs.fishPlugins.async-prompt; }
     ];
 
     functions = {
@@ -103,5 +100,6 @@
     "cdaccount" = "cd $HOME/Workspace/shopware-business-platform/Components/Account2";
     "ls" = "eza --icons --group --group-directories-first";
     "ll" = "eza --icons --group --group-directories-first -l";
+    "hms" = "darwin-rebuild switch --flake $HOME/.config/nix-dotfiles/ --show-trace";
   };
 }

@@ -29,6 +29,7 @@
       "minecraft"
       "lm-studio"
       "ghostty"
+      "hammerspoon"
     ];
   };
 }

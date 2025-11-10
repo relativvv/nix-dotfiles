@@ -23,6 +23,9 @@
 
     # workaround for fixing the path order: https://github.com/LnL7/nix-darwin/issues/122
     shellInit = ''
+      eval $(ssh-agent -c)
+      ssh-add > /dev/null
+
       for elt in $PATH
         if not contains -- $elt $oldPath /usr/local/bin /usr/bin /bin /usr/sbin /sbin
           set -ag fish_user_paths $elt
@@ -100,6 +103,6 @@
     "cdaccount" = "cd $HOME/Workspace/shopware-business-platform/Components/Account2";
     "ls" = "eza --icons --group --group-directories-first";
     "ll" = "eza --icons --group --group-directories-first -l";
-    "hms" = "darwin-rebuild switch --flake $HOME/.config/nix-dotfiles/ --show-trace";
+    "hms" = "sudo darwin-rebuild switch --flake $HOME/.config/nix-dotfiles/ --show-trace";
   };
 }

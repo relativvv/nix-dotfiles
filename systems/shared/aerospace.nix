@@ -3,7 +3,7 @@
   ...
 }: {
   services.aerospace = {
-    enable = true;
+    enable = false;
     package = pkgs.aerospace;
 
     settings= {
@@ -36,10 +36,6 @@
           run = "layout floating";
         }
         {
-          "if".app-name-regex-substring = "zen";
-          run = "layout floating";
-        }
-        {
           "if".app-name-regex-substring = "whatsapp";
           run = "layout floating";
         }
@@ -49,6 +45,10 @@
         }
         {
           "if".app-name-regex-substring = "chatgpt";
+          run = "layout floating";
+        }
+        {
+          "if".app-name-regex-substring = "slack";
           run = "layout floating";
         }
         {
@@ -73,23 +73,23 @@
         alt-shift-up = "join-with up";
         alt-shift-right = "join-with right";
 
-        alt-h = "focus left";
-        alt-j = "focus down";
-        alt-k = "focus up";
-        alt-l = "focus right";
-
+        alt-ctrl-h = "focus left";
+        alt-ctrl-j = "focus down";
+        alt-ctrl-k = "focus up";
+        alt-ctrl-l = "focus right";
+      
         alt-shift-h = "move left";
         alt-shift-j = "move down";
         alt-shift-k = "move up";
         alt-shift-l = "move right";
 
-        alt-f1 = "workspace 0";
-        alt-1 = "workspace 1";
-        alt-2 = "workspace 2";
-        alt-3 = "workspace 3";
-        alt-4 = "workspace 4";
-        alt-5 = "workspace 5";
-        alt-6 = "workspace 6";
+        alt-ctrl-f1 = "workspace 0";
+        alt-ctrl-1 = "workspace 1";
+        alt-ctrl-2 = "workspace 2";
+        alt-ctrl-3 = "workspace 3";
+        alt-ctrl-4 = "workspace 4";
+        alt-ctrl-5 = "workspace 5";
+        alt-ctrl-6 = "workspace 6";
 
         alt-shift-p = "workspace --wrap-around prev";
         alt-shift-n = "workspace --wrap-around next";
@@ -106,7 +106,9 @@
         alt-shift-cmd-left = "move-node-to-monitor left";
 
         alt-shift-r = "mode resize";
-        alt-shift-z = "mode layout";
+        alt-shift-y = "mode layout";
+
+        alt-g = "exec-and-forget open -na ghostty";
       };
 
       mode.resize.binding = {

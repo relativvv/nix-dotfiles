@@ -17,7 +17,7 @@ Some applications need to be installed through homebrew, so we just install it.
 
 1. Clone the repository
 ```bash
-git clone git@github.com:kevinrudde/nix-dotfiles.git ~/.config/nix-dotfiles
+git clone git@github.com:relativvv/nix-dotfiles.git ~/.config/nix-dotfiles
 ```
 
 2. Initialize the Nix setup with

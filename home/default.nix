@@ -14,6 +14,7 @@
     ./features/python
     ./features/ghostty
     ./features/volta
+    ./features/jujutsu
   ];
 
   # This value determines the Home Manager release that your configuration is

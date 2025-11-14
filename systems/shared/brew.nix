@@ -30,6 +30,16 @@
       "lm-studio"
       "ghostty"
       "hammerspoon"
+      #"microsoft-office"
+      #"microsoft-teams"
+      #"craft"
+      #"jetbrains-toolbox"
+      #"chatgpt"
+      #"miro"
+      #"proton-mail"
+      #"whatsapp"
+      #"slack"
+      #"discord"
     ];
   };
 }

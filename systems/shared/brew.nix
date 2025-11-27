@@ -29,27 +29,26 @@
     ];
 
     casks = [
+      "hammerspoon"
       "orbstack"
       "insomnia"
       "minecraft"
       "lm-studio"
       "ghostty"
-      "hammerspoon"
       "yaak"
       "lm-studio"
       "zen"
       "spotify"
-      #"figma"
-      #"microsoft-office"
-      #"microsoft-teams"
-      #"craft"
-      #"jetbrains-toolbox"
-      #"chatgpt"
-      #"miro"
-      #"proton-mail"
-      #"whatsapp"
-      #"slack"
-      #"discord"
+      "cursor"
+      "figma"
+      "craft"
+      "chatgpt"
+      "miro"
+      "proton-mail"
+      "whatsapp"
+      "slack"
+      "discord"
+      "visual-studio-code"
     ];
   };
 }

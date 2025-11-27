@@ -3,7 +3,7 @@
   ...
 }: {
   services.aerospace = {
-    enable = false;
+    enable = true;
     package = pkgs.aerospace;
 
     settings= {
@@ -53,6 +53,10 @@
         }
         {
           "if".app-name-regex-substring = "notion";
+          run = "layout floating";
+        }
+        {
+          "if".app-name-regex-substring = "craft";
           run = "layout floating";
         }
       ];

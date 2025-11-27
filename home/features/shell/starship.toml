@@ -19,7 +19,7 @@ Arch = '󰣇'
 Ubuntu = ''
 Macos = '󰀵'
 
-# ---y
+# ---
 
 [character]
 format = '$symbol '

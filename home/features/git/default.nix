@@ -24,7 +24,6 @@
       rebase.autoStash = true;
       push.default = "simple";
       fetch.prune = true;
-
       gpg.format = "ssh";
     };
   };

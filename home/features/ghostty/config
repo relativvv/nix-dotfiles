@@ -2,10 +2,7 @@ theme = catppuccin-mocha
 
 font-size = 14
 background-blur-radius = 20
-mouse-hide-while-typing = true
+mouse-hide-while-typing = false
 window-decoration = true
 macos-option-as-alt = false
-
 background-opacity = 0.7
-keybind = global:cmd+/=toggle_quick_terminal
-

@@ -13,14 +13,13 @@
 
     # Plugins
     plugins = with pkgs.tmuxPlugins; [
-      tpm
       sensible
       cpu
       catppuccin
       tmux-fzf
-      sessionx
+      tmux-sessionx
       {
-        plugin = floax;
+        plugin = tmux-floax;
         extraConfig = ''
           set -g @floax-width '80%'
           set -g @floax-height '80%'
@@ -76,9 +75,6 @@
       set -g status-right "#{E:@catppuccin_status_application}"
       set -agF status-right "#{E:@catppuccin_status_cpu}"
       set -ag status-right "#{E:@catppuccin_status_uptime}"
-
-      # Initialize TPM
-      run '~/.config/tmux/plugins/tpm/tpm'
     '';
   };
 

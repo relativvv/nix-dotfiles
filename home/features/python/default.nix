@@ -18,7 +18,7 @@
   # where XX is the minor version (e.g., python313 = Python 3.13)
 
   home.packages = [
-    (pkgs.python313.withPackages (ppkgs: []))
+    (pkgs.python314.withPackages (ppkgs: []))
     pkgs.pipenv
     pkgs.virtualenv
     pkgs.uv

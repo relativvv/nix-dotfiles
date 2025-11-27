@@ -5,8 +5,11 @@
 You need to install Nix, but we are not using their official installer. Instead, we are using the Determinate Systems Nix Installer. Just simply paste the following command into your terminal and you should be good to go:
 
 ```bash
-curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install
+curl -fsSL https://install.determinate.systems/nix | sh -s -- install --determinate --nix-build-group-id 5000 --nix-build-user-id-base 5000
 ```
+
+> [!TIP]
+> Download and install Nix with a setup wizard [here](https://docs.determinate.systems/determinate-nix/) which is most likely to be more reliable
 
 ### Homebrew
 

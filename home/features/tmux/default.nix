@@ -4,6 +4,7 @@
 
   programs.tmux = {
     enable = true;
+    shell = "/etc/profiles/per-user/R.Schulte/bin/fish";
 
     # Basic tmux settings
     prefix = "C-b";
@@ -33,6 +34,9 @@
 
     # Additional configuration
     extraConfig = ''
+      # Default command to run fish as login shell
+      set -g default-command "/etc/profiles/per-user/R.Schulte/bin/fish"
+
       # Pane border styles
       set -g pane-active-border-style 'fg=magenta,bg=default'
       set -g pane-border-style 'fg=brightblack,bg=default'
@@ -56,13 +60,13 @@
       # Catppuccin theme configuration
       set -g @catppuccin_window_left_separator ""
       set -g @catppuccin_window_right_separator " "
-      set -g @catppuccin_window_middle_separator " █"
+      set -g @catppuccin_window_middle_separator " █"å
       set -g @catppuccin_window_number_position "right"
       set -g @catppuccin_window_default_fill "number"
       set -g @catppuccin_window_default_text "#W"
       set -g @catppuccin_window_current_fill "number"
       set -g @catppuccin_window_current_text "#W#{?window_zoomed_flag,(),}"
-      set -g @catppuccin_status_modules_right "directory"
+      set -g @catppuccin_status_modules_right "directory cpu application"
       set -g @catppuccin_status_modules_left "session"
       set -g @catppuccin_status_left_separator  " "
       set -g @catppuccin_status_right_separator " "

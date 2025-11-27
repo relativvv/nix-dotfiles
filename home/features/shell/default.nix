@@ -100,6 +100,7 @@
     "pip" = "pip3";
     "ls" = "eza --icons --group --group-directories-first";
     "ll" = "eza --icons --group --group-directories-first -l";
-    "hms" = "sudo darwin-rebuild switch --flake $HOME/.config/nix-dotfiles/ --show-trace";
+    "tree" = "eza --icons --group --group-directories-first -T";
+    "hms" = "git -C $HOME/.config/nix-dotfiles add . && sudo darwin-rebuild switch --flake $HOME/.config/nix-dotfiles/ --show-trace";
   };
 }

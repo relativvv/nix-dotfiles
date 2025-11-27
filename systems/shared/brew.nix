@@ -38,6 +38,7 @@
       "yaak"
       "lm-studio"
       "zen"
+      "spotify"
       #"figma"
       #"microsoft-office"
       #"microsoft-teams"

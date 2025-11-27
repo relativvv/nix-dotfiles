@@ -32,23 +32,6 @@ nix run nix-darwin -- switch --flake ~/.config/nix-dotfiles
 ```bash
 darwin-rebuild switch --flake ~/.config/nix-dotfiles/ --show-trace
 ```
- 
-## MacOS Settings
-
-### Keyboard
-
-I am using the standard german layout, to have the same layout as Windows and Linux.
-* Go to "Sytem Settings > Keyboard > Text Input".
-* There you can change the layout by clicking on edit.
-* Now another window is opening. Click on + in the left side to add another layout.
-* Select German and then "German - Standard". Save it.
-
-### Shortcuts
-
-I have swapped my ctrl and cmd key on my external keyboard. You can simply do that aswell.
-* Go to "Sytem Settings > Keyboard" and click on "Keyboard Shortcuts...".
-* Switch to the "Modifier Keys" tab and select your external keyboard in the top
-* Set Control to Command and Command to Control
 
 ### Change default shell
 

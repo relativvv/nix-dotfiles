@@ -38,13 +38,13 @@
       defaultPackage.x86_64-darwin = home-manager.defaultPackage.x86_64-darwin;
 
       darwinConfigurations = {
-        arceus = nix-darwin.lib.darwinSystem {
+        "Robins-MacBook-Pro" = nix-darwin.lib.darwinSystem {
           specialArgs = extraArgs // {
             remapKeys = false;
           };
           system = "aarch64-darwin";
           modules = [
-            ./systems/arceus
+            ./systems/Robins-MacBook-Pro
             home-manager.darwinModules.default
             {
               home-manager.useGlobalPkgs = true;

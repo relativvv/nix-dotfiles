@@ -3,7 +3,7 @@
   ...
 }: {
   services.aerospace = {
-    enable = false;
+    enable = true;
     package = pkgs.aerospace;
 
     settings= {

@@ -4,7 +4,7 @@ alwaysApply: true
 This project is the Mac OS System configuration for the Macbook from Robin, always running the latest Mac OS Version. This script utilizes Nix to setup a Mac Os System with the mandatory functions a developer needs in his day to day work. 
 
 The project is splitted apart into home and system
-- Home contains specific feature configurations and the "arceus.nix" file. "Arceus" is the computer name.
+- Home contains specific feature configurations and the "Robins-MacBook-Pro.nix" file. "Robins-MacBook-Pro" is the computer name.
 - Systems is used to configure and set the features 
 
 IMPORTANT:

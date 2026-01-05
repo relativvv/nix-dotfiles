@@ -26,6 +26,11 @@
       "yq"
       "jq"
       "fd"
+      "trufflehog"
+      "gitleaks"
+      "git-filter-repo"
+      "awscli"
+      "mole"
     ];
 
     casks = [
@@ -49,6 +54,7 @@
       "slack"
       "discord"
       "visual-studio-code"
+      "claude-code"
     ];
   };
 }

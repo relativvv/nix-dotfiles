@@ -1,6 +1,7 @@
 theme = catppuccin-mocha
 
 font-size = 14
+shell-integration = "fish"
 background-blur-radius = 20
 mouse-hide-while-typing = false
 window-decoration = true

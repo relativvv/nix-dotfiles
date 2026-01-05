@@ -44,6 +44,9 @@
       ! set -q MANPATH; and set MANPATH \'\'; set -gx MANPATH "/opt/homebrew/share/man" $MANPATH;
       ! set -q INFOPATH; and set INFOPATH \'\'; set -gx INFOPATH "/opt/homebrew/share/info" $INFOPATH;
 
+      # Local Binaries
+      fish_add_path $HOME/.local/bin
+
       # Volta
       set -gx VOLTA_HOME $HOME/.volta
       fish_add_path $VOLTA_HOME/bin

@@ -55,6 +55,7 @@
       "discord"
       "visual-studio-code"
       "claude-code"
+      "ngrok"
     ];
   };
 }

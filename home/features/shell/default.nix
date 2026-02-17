@@ -74,6 +74,26 @@
       t = ''
         tmux attach -t "$(tmux ls -F '#{session_name}:#{window_name}' | fzf)"
       '';
+      awsx = ''
+        if test -z $AWSX_PROFILES
+            set -gx AWS_PROFILES (aws configure list-profiles | string split0)
+        end
+
+        set -gx AWS_PROFILE (echo $AWS_PROFILES | fzf)
+
+        echo "Using profile: $AWS_PROFILE"
+        aws sts get-caller-identity &> /dev/null
+        if test $status != 0
+            echo "AWS SSO Session expired. Logging in..."
+            aws sso login
+        else
+            echo "Found valid SSO session, using it!"
+        end
+      '';
+      ssm-headscale = ''
+        set HEADSCALE_INSTANCE_ID (aws ec2 describe-instances --filters "Name=tag:Name,Values=headscale" --query 'Reservations[].Instances[].InstanceId' --output text)
+        aws ssm start-session --document-name AWS-StartInteractiveCommand  --parameters command="bash -l" --target $HEADSCALE_INSTANCE_ID
+      '';
     };
   };
 

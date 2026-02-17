@@ -19,6 +19,8 @@
     cargo
     nmap
 
+    terraform
+
     docker-client
     docker-buildx
     dive

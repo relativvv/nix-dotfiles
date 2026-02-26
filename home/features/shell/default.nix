@@ -124,6 +124,6 @@
     "ls" = "eza --icons --group --group-directories-first";
     "ll" = "eza --icons --group --group-directories-first -l";
     "tree" = "eza --icons --group --group-directories-first -T";
-    "hms" = "git -C $HOME/.config/nix-dotfiles add . && sudo darwin-rebuild switch --flake $HOME/.config/nix-dotfiles/ --show-trace";
+    "hms" = "sudo darwin-rebuild switch --flake $HOME/.config/nix-dotfiles/ --show-trace";
   };
 }

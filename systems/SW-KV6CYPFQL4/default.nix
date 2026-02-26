@@ -24,7 +24,7 @@
 
   home-manager.users."R.Schulte" = {
     imports = [
-      ../../home/Robins-MacBook-Pro.nix
+      ../../home/SW-KV6CYPFQL4.nix
     ];
   };
 

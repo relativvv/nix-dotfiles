@@ -38,13 +38,13 @@
       defaultPackage.x86_64-darwin = home-manager.defaultPackage.x86_64-darwin;
 
       darwinConfigurations = {
-        "Robins-MacBook-Pro" = nix-darwin.lib.darwinSystem {
+        "SW-KV6CYPFQL4" = nix-darwin.lib.darwinSystem {
           specialArgs = extraArgs // {
             remapKeys = false;
           };
           system = "aarch64-darwin";
           modules = [
-            ./systems/Robins-MacBook-Pro
+            ./systems/SW-KV6CYPFQL4
             home-manager.darwinModules.default
             {
               home-manager.useGlobalPkgs = true;

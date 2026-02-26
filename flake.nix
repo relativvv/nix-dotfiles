@@ -54,6 +54,7 @@
             determinate.darwinModules.default
             {
                 determinate-nix.customSettings = {
+                  auto-optimise-store = true;
                   lazy-trees = true;
                   trusted-users = "root R.Schulte";
                   trusted-substituters = "https://cachix.cachix.org https://nixpkgs.cachix.org";

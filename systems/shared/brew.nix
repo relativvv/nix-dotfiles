@@ -56,6 +56,9 @@
       "visual-studio-code"
       "claude-code"
       "ngrok"
+      "zed"
+      "codex"
+      "shopware-cli"
     ];
   };
 }

@@ -1,6 +1,3 @@
----
-alwaysApply: true
----
 This project is the Mac OS System configuration for the Macbook from Robin, always running the latest Mac OS Version. This script utilizes Nix to setup a Mac Os System with the mandatory functions a developer needs in his day to day work. 
 
 The project is splitted apart into home and system

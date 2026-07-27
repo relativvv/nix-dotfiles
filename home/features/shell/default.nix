@@ -54,6 +54,10 @@
       # Go Binaries
       fish_add_path $GOPATH/bin
 
+      # Shopware PaaS CLI
+      set -gx SW_PAAS_INSTALL $HOME/.sw-paas
+      fish_add_path $SW_PAAS_INSTALL/bin
+
       # XDG Config Home
       set -gx XDG_CONFIG_HOME $HOME/.config
 

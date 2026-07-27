@@ -13,6 +13,10 @@
 
     taps = [
       "aws/tap"
+      {
+        name = "shopware/tap";
+        trusted = true;
+      }
     ];
 
     brews = [

@@ -4,7 +4,7 @@
     flake.inputs.devenv.packages.${pkgs.system}.devenv
     cachix
 
-    nixpkgs-fmt
+    nixfmt
 
     _1password-cli
     jq
@@ -29,4 +29,3 @@
     bun
   ];
 }
-

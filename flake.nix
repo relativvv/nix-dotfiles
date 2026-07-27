@@ -5,7 +5,7 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     determinate.url = "https://flakehub.com/f/DeterminateSystems/determinate/3.12.0";
 
-    nix-darwin.url = "github:LnL7/nix-darwin/master";
+    nix-darwin.url = "github:nix-darwin/nix-darwin/master";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
 
     home-manager = {
@@ -18,25 +18,17 @@
 
   outputs =
     { self
-    , nixpkgs
     , determinate
     , nix-darwin
     , home-manager
-    , devenv
     , ...
     }:
     let
-      supportedSystems = [ "x86_64-linux" "aarch64-darwin" ];
-      forAllSystems = nixpkgs.lib.genAttrs supportedSystems;
       extraArgs = {
         flake = self;
       };
     in
     {
-      defaultPackage.x86_64-linux = home-manager.defaultPackage.x86_64-linux;
-      defaultPackage.aarch64-darwin = home-manager.defaultPackage.aarch64-darwin;
-      defaultPackage.x86_64-darwin = home-manager.defaultPackage.x86_64-darwin;
-
       darwinConfigurations = {
         "SW-KV6CYPFQL4" = nix-darwin.lib.darwinSystem {
           specialArgs = extraArgs // {

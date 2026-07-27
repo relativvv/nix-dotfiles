@@ -6,7 +6,7 @@
 }:
 
 let
-  php = pkgs.php83.buildEnv {
+  php = pkgs.php85.buildEnv {
     extensions = { enabled, all }: enabled ++ [ all.xdebug all.xsl ];
     extraConfig = ''
       memory_limit=512M

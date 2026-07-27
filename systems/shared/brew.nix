@@ -41,7 +41,6 @@
       "lm-studio"
       "ghostty"
       "yaak"
-      "lm-studio"
       "zen"
       "spotify"
       "cursor"
@@ -61,7 +60,6 @@
       "obsidian"
       "obs"
       "openusage"
-      "zed"
     ];
   };
 }

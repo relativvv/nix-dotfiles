@@ -46,7 +46,6 @@
       "spotify"
       "cursor"
       "figma"
-      "craft"
       "chatgpt"
       "miro"
       "proton-mail"
@@ -59,6 +58,10 @@
       "zed"
       "codex"
       "shopware-cli"
+      "obsidian"
+      "obs"
+      "openusage"
+      "zed"
     ];
   };
 }

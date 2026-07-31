@@ -65,6 +65,7 @@
       "obsidian"
       "obs"
       "openusage"
+      "blender"
     ];
   };
 }

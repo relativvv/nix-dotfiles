@@ -35,6 +35,7 @@
       "git-filter-repo"
       "awscli"
       "mole"
+      "ffmpeg"
     ];
 
     casks = [

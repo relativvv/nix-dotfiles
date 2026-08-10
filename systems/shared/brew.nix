@@ -36,6 +36,7 @@
       "awscli"
       "mole"
       "ffmpeg"
+      "rtk"
     ];
 
     casks = [

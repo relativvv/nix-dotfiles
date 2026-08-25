@@ -1,9 +1,9 @@
 Swipe = hs.loadSpoon("Swipe")
 
-local AEROSPACE = "/run/current-system/sw/bin/aerospace"
+local AEROSPORK = "/run/current-system/sw/bin/aerospork"
 
-function aerospaceExec(cmd)
-  os.execute("nohup " .. AEROSPACE .. " " .. cmd .. " &", true)
+function aerosporkExec(cmd)
+  os.execute("nohup " .. AEROSPORK .. " " .. cmd .. " &", true)
 end
 
 -- use four finger swipe to switch workspace
@@ -15,9 +15,9 @@ Swipe:start(4, function(direction, distance, id)
 
           -- use "natural" scrolling
           if direction == "left" then
-            aerospaceExec("workspace --wrap-around prev")
+            aerosporkExec("workspace --wrap-around prev")
           elseif direction == "right" then
-            aerospaceExec("workspace --wrap-around next")
+            aerosporkExec("workspace --wrap-around next")
           end
       end
   else

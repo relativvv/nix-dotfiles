@@ -1,12 +1,14 @@
-{ pkgs
-, home-manager
-, flake
-, lib
-, config
-, ...
-}: {
+{
+  pkgs,
+  home-manager,
+  flake,
+  lib,
+  config,
+  ...
+}:
+{
   imports = [
-    ../shared/aerospace.nix
+    ../shared/aerospork.nix
     ../shared/brew.nix
     ../shared/system.nix
     ../shared/fonts.nix
@@ -41,6 +43,6 @@
   documentation.man.enable = true;
 
   time.timeZone = "Europe/Berlin";
-  
+
   nix.enable = false;
 }

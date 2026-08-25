@@ -13,6 +13,7 @@
 
     taps = [
       "aws/tap"
+      "chattymin/tap"
       {
         name = "shopware/tap";
         trusted = true;
@@ -67,6 +68,7 @@
       "obs"
       "openusage"
       "blender"
+      "poke-token-bar"
     ];
   };
 }

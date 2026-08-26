@@ -5,9 +5,13 @@
 
 let
   aerospork = pkgs.callPackage ../../packages/aerospork.nix { };
+  dellMonitor = {
+    uuid = "93923EDF-7912-45D4-8BC5-528871ED004F";
+  };
 
   settings = {
     start-at-login = false;
+    auto-move-workspaces-on-monitor-connect = true;
 
     enable-normalization-flatten-containers = true;
     enable-normalization-opposite-orientation-for-nested-containers = true;
@@ -65,6 +69,12 @@ let
 
     workspace-to-monitor-force-assignment = {
       "0" = "built-in";
+      "1" = dellMonitor;
+      "2" = dellMonitor;
+      "3" = dellMonitor;
+      "4" = dellMonitor;
+      "5" = dellMonitor;
+      "6" = dellMonitor;
     };
 
     key-mapping.preset = "qwerty";
@@ -95,6 +105,14 @@ let
       alt-ctrl-4 = "workspace 4";
       alt-ctrl-5 = "workspace 5";
       alt-ctrl-6 = "workspace 6";
+
+      alt-ctrl-shift-0 = "move-workspace-to-monitor --workspace 0 built-in";
+      alt-ctrl-shift-1 = "move-workspace-to-monitor --workspace 1 'DELL U3421WE'";
+      alt-ctrl-shift-2 = "move-workspace-to-monitor --workspace 2 'DELL U3421WE'";
+      alt-ctrl-shift-3 = "move-workspace-to-monitor --workspace 3 'DELL U3421WE'";
+      alt-ctrl-shift-4 = "move-workspace-to-monitor --workspace 4 'DELL U3421WE'";
+      alt-ctrl-shift-5 = "move-workspace-to-monitor --workspace 5 'DELL U3421WE'";
+      alt-ctrl-shift-6 = "move-workspace-to-monitor --workspace 6 'DELL U3421WE'";
 
       alt-shift-p = "workspace --wrap-around prev";
       alt-shift-n = "workspace --wrap-around next";

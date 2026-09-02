@@ -59,7 +59,7 @@
       "slack"
       "discord"
       "visual-studio-code"
-      "claude-code"
+      "claude-code@latest"
       "ngrok"
       "zed"
       "codex"

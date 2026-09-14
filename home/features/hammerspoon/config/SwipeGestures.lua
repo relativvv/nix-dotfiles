@@ -1,9 +1,11 @@
 Swipe = hs.loadSpoon("Swipe")
 
-local AEROSPORK = "/run/current-system/sw/bin/aerospork"
+-- Requires "Enable IPC" in OmniWM's status bar menu, otherwise omniwmctl
+-- cannot reach the running instance.
+local OMNIWMCTL = "/run/current-system/sw/bin/omniwmctl"
 
-function aerosporkExec(cmd)
-  os.execute("nohup " .. AEROSPORK .. " " .. cmd .. " &", true)
+function omniwmExec(cmd)
+  os.execute("nohup " .. OMNIWMCTL .. " " .. cmd .. " &", true)
 end
 
 -- use four finger swipe to switch workspace
@@ -15,9 +17,9 @@ Swipe:start(4, function(direction, distance, id)
 
           -- use "natural" scrolling
           if direction == "left" then
-            aerosporkExec("workspace --wrap-around prev")
+            omniwmExec("command switch-workspace prev")
           elseif direction == "right" then
-            aerosporkExec("workspace --wrap-around next")
+            omniwmExec("command switch-workspace next")
           end
       end
   else

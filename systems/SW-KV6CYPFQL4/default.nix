@@ -8,7 +8,8 @@
 }:
 {
   imports = [
-    ../shared/aerospork.nix
+    # ../shared/aerospork.nix  # replaced by OmniWM; config kept, re-enable by uncommenting
+    ../shared/omniwm.nix
     ../shared/brew.nix
     ../shared/system.nix
     ../shared/fonts.nix
